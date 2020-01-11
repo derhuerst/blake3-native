@@ -1,0 +1,19 @@
+[package]
+publish = false
+name = 'blake3-native'
+version = '1.0.0'
+authors = ['Jannis R <mail@jannisr.de>']
+edition = '2018'
+license = 'ISC'
+build = 'build.rs'
+exclude = ['artifacts.json', 'index.node']
+
+[lib]
+name = 'blake3_native'
+crate-type = ['cdylib']
+
+[build-dependencies]
+neon-build = '0.3.3'
+
+[dependencies]
+neon = '0.3.3'

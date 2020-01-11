@@ -1,0 +1,38 @@
+{
+	"name": "blake3-native",
+	"description": "Node.js bindings to the BLAKE3 hash function.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"native/Cargo.toml",
+		"native/index.node",
+		"native/src",
+		"example.js"
+	],
+	"keywords": [
+		"blake3",
+		"hash",
+		"native",
+		"bindings"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/blake3-native",
+	"repository": "derhuerst/blake3-native",
+	"bugs": "https://github.com/derhuerst/blake3-native/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=10"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"neon-cli": "^0.3.3"
+	},
+	"scripts": {
+		"dev-build": "neon build",
+		"install": "neon build --release",
+		"test": "node test.js",
+		"prepublishOnly": "npm run install && npm test"
+	}
+}

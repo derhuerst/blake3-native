@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+
+.nvm-version
+node_modules
+pnpm-debug.log
+
+/package-lock.json
+/yarn.lock
+/shrinkwrap.yaml
+
+/native/target
+/native/index.node
+/native/artifacts.json
+/**/*~

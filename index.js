@@ -1,5 +1,10 @@
 'use strict'
 
-const blake3 = require('./native/index.node')
+const {HashCtx, hash} = require('./native/index.node')
 
-// todo
+const createHash = () => new HashCtx()
+
+module.exports = {
+	createHash,
+	hash
+}

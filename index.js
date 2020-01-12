@@ -1,10 +1,10 @@
 'use strict'
 
-const {HashCtx, hash} = require('./native/index.node')
+const {BLAKE3Hash, hashBLAKE3} = require('./native/index.node')
 
-const createHash = () => new HashCtx()
+const createBLAKE3Hash = () => new BLAKE3Hash()
 
 module.exports = {
-	createHash,
-	hash
+	createHash: createBLAKE3Hash,
+	hash: hashBLAKE3
 }

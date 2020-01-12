@@ -33,14 +33,34 @@ we recommend [Argon2](https://github.com/P-H-C/phc-winner-argon2).*
 ## Installation
 
 ```shell
-npm install derhuerst/blake3-native
+npm install blake3-native
 ```
 
 
 ## Usage
 
+### hashing a single chunk of data
+
 ```js
-todo
+const blake3 = require('blake3-native')
+
+const buf = str => Buffer.from(str, 'utf8')
+
+console.log('at once:', blake3.hash(buf('some input!')))
+// 948abea72a9c6bd221d734457c15def1be448efef2d48b91882e73cd9254f0bb
+```
+
+### hashing chunks of data continuously
+
+`createHash` *roughly* follows the [Node `createHash` API](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options).
+
+```js
+const h = blake3.createHash()
+
+h.update(buf('some '))
+h.update(buf('input!'))
+console.log('chunked:', h.digest())
+// 948abea72a9c6bd221d734457c15def1be448efef2d48b91882e73cd9254f0bb
 ```
 
 

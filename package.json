@@ -1,12 +1,12 @@
 {
 	"name": "blake3-native",
 	"description": "Node.js bindings to the BLAKE3 hash function.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "index.js",
 	"files": [
 		"index.js",
 		"native/Cargo.toml",
-		"native/index.node",
+		"native/Cargo.lock",
 		"native/src",
 		"example.js"
 	],

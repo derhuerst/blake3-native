@@ -1,5 +1,9 @@
 # blake3-native
 
+**Deprecated. Use [the `blake3` npm package](https://github.com/connor4312/blake3#speed).**
+
+---
+
 **Node.js bindings to the [BLAKE3 hash function](https://github.com/BLAKE3-team/BLAKE3).**
 
 ⚠️ This lib is a work-in-progress, check out [the Issues page](https://github.com/derhuerst/blake3-native/issues) for things to be done. I'm a Rust newbie, so expect non-idiomatic code!
